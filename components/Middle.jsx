@@ -16,7 +16,7 @@ const Middle = ({ selected, setselected, darkMode }) => {
               selected === "activities" && darkMode
                 ? "#002929"
                 : selected === "activities" && !darkMode
-                ? "#EBFFF9"
+                ? "#C2FFED"
                 : "#fff",
           },
         ]}
@@ -39,7 +39,7 @@ const Middle = ({ selected, setselected, darkMode }) => {
         </Text>
       </TouchableOpacity>
 
-      <View style={styles.bar} />
+
 
       <TouchableOpacity
         onPress={() => {
@@ -53,7 +53,7 @@ const Middle = ({ selected, setselected, darkMode }) => {
               selected === "experiences" && darkMode
                 ? "#002929"
                 : selected === "experiences" && !darkMode
-                ? "#EBFFF9"
+                ? "#C2FFED"
                 : "#fff",
           },
         ]}
@@ -76,7 +76,7 @@ const Middle = ({ selected, setselected, darkMode }) => {
         </Text>
       </TouchableOpacity>
 
-      <View style={styles.bar} />
+ 
 
       <TouchableOpacity
         onPress={() => {
@@ -90,7 +90,7 @@ const Middle = ({ selected, setselected, darkMode }) => {
               selected === "followers" && darkMode
                 ? "#002929"
                 : selected === "followers" && !darkMode
-                ? "#EBFFF9"
+                ? "#C2FFED"
                 : "#fff",
           },
         ]}
