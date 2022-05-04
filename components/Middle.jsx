@@ -1,27 +1,117 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 
-const Middle = () => {
+const Middle = ({ selected, setselected, darkMode }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.activities}>
-        <Text style={styles.number}>1,250</Text>
-        <Text style={styles.text}>Activities</Text>
-      </View>
+      <TouchableOpacity
+        onPress={() => {
+          setselected("activities");
+        }}
+        activeOpacity={0.75}
+        style={[
+          styles.activities,
+          {
+            backgroundColor:
+              selected === "activities" && darkMode
+                ? "#002929"
+                : selected === "activities" && !darkMode
+                ? "#EBFFF9"
+                : "#fff",
+          },
+        ]}
+      >
+        <Text
+          style={[
+            styles.number,
+            { color: selected === "activities" && darkMode ? "#eee" : "#111" },
+          ]}
+        >
+          1,250
+        </Text>
+        <Text
+          style={[
+            styles.text,
+            { color: selected === "activities" && darkMode ? "#ccc" : "#333" },
+          ]}
+        >
+          Activities
+        </Text>
+      </TouchableOpacity>
 
       <View style={styles.bar} />
 
-      <View style={styles.activities}>
-        <Text style={styles.number}>250</Text>
-        <Text style={styles.text}>Experiences</Text>
-      </View>
+      <TouchableOpacity
+        onPress={() => {
+          setselected("experiences");
+        }}
+        activeOpacity={0.75}
+        style={[
+          styles.activities,
+          {
+            backgroundColor:
+              selected === "experiences" && darkMode
+                ? "#002929"
+                : selected === "experiences" && !darkMode
+                ? "#EBFFF9"
+                : "#fff",
+          },
+        ]}
+      >
+        <Text
+          style={[
+            styles.number,
+            { color: selected === "experiences" && darkMode ? "#eee" : "#111" },
+          ]}
+        >
+          250
+        </Text>
+        <Text
+          style={[
+            styles.text,
+            { color: selected === "experiences" && darkMode ? "#ccc" : "#333" },
+          ]}
+        >
+          Experiences
+        </Text>
+      </TouchableOpacity>
 
       <View style={styles.bar} />
 
-      <View style={styles.activities}>
-        <Text style={styles.number}>1,250</Text>
-        <Text style={styles.text}>Activities</Text>
-      </View>
+      <TouchableOpacity
+        onPress={() => {
+          setselected("followers");
+        }}
+        activeOpacity={0.75}
+        style={[
+          styles.activities,
+          {
+            backgroundColor:
+              selected === "followers" && darkMode
+                ? "#002929"
+                : selected === "followers" && !darkMode
+                ? "#EBFFF9"
+                : "#fff",
+          },
+        ]}
+      >
+        <Text
+          style={[
+            styles.number,
+            { color: selected === "followers" && darkMode ? "#eee" : "#111" },
+          ]}
+        >
+          1,250
+        </Text>
+        <Text
+          style={[
+            styles.text,
+            { color: selected === "followers" && darkMode ? "#ccc" : "#333" },
+          ]}
+        >
+          Followers
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -32,7 +122,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "#fff",
-    paddingVertical: 25,
+    paddingVertical: 0,
     marginTop: -35,
     marginHorizontal: 15,
     borderRadius: 7.5,
@@ -50,16 +140,17 @@ const styles = StyleSheet.create({
   activities: {
     flex: 1,
     alignItems: "center",
+    margin: 5,
+    padding: 5,
+    borderRadius: 5,
   },
-
   number: {
     fontSize: 22,
     fontWeight: "bold",
   },
 
   text: {
-    color: "#999",
-    marginTop: 5
+    marginTop: 5,
   },
 
   bar: {
