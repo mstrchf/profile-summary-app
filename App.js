@@ -23,7 +23,7 @@ export default function App() {
     <View
       style={[
         styles.container,
-        { backgroundColor: darkMode ? "#002929" : "#EBFFF9" },
+        ,
       ]}
     >
       <ImageBackground
@@ -38,7 +38,7 @@ export default function App() {
         setselected={setselected}
         darkMode={darkMode}
       />
-      <Text style={[styles.title, {color: darkMode ? '#fff' : '#000'}]}>
+      <Text style={[styles.title, ]}>
         {selected === "activities"
           ? "Activities"
           : selected === "experiences"
@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: "bold",
-    marginVertical: 15,
+    marginTop: 25,
+    marginBottom: 10,
     marginHorizontal: 15,
   },
 });
