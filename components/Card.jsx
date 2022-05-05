@@ -19,7 +19,7 @@ const Card = ({ darkMode }) => {
               activeOpacity={0.75}
               style={[
                 styles.rightAction,
-                { backgroundColor: darkMode ? "#640207" : "#FC5F67" },
+                { backgroundColor: darkMode ? "#C9030D" : "#FC5F67" },
               ]}
             >
               <AntDesign
@@ -72,14 +72,14 @@ const Card = ({ darkMode }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    padding: 5,
+    padding: 10,
     marginHorizontal: 15,
     marginVertical: 7.5,
     borderRadius: 10,
     borderTopLeftRadius: 40,
     borderBottomLeftRadius: 40,
-    borderTopRightRadius: 40,
-    borderBottomRightRadius: 40,
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
     backgroundColor: "#fff",
     shadowColor: "#000",
     shadowOffset: {
@@ -102,18 +102,18 @@ const styles = StyleSheet.create({
   },
 
   rightAction: {
-    width: 70,
-    height: 67.5,
+    width: 75,
+    height: 75,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#c00021",
     marginVertical: 10,
     marginRight: 15,
-    borderRadius: 60,
+    borderRadius: 10,
   },
   leftAction: {
-    width: 70,
-    height: 67.5,
+    width: 75,
+    height: 75,
     justifyContent: "center",
     alignItems: "center",
     marginVertical: 10,

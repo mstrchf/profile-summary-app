@@ -39,7 +39,7 @@ const Middle = ({ selected, setselected, darkMode }) => {
         </Text>
       </TouchableOpacity>
 
-
+<View style={styles.bar}/>
 
       <TouchableOpacity
         onPress={() => {
@@ -76,7 +76,7 @@ const Middle = ({ selected, setselected, darkMode }) => {
         </Text>
       </TouchableOpacity>
 
- 
+      <View style={styles.bar}/>
 
       <TouchableOpacity
         onPress={() => {
