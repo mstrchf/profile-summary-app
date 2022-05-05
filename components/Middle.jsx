@@ -141,11 +141,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     margin: 5,
-    padding: 5,
+    paddingVertical: 7.5,
     borderRadius: 5,
   },
   number: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: "bold",
   },
 
